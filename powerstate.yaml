@@ -14,5 +14,5 @@
       username: "{{ username }}"
       password:  "{{ password }}"
       validate_certs: False
-      device_id: "{{devide_id}}"
+      device_id: "{{device_id}}"
       power_state: "{{power_state}}"

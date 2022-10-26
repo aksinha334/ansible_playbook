@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  connection: local
+  name: Dell OpenManage Ansible - OME Power state operations.
+  gather_facts: False
+
+  collections:
+    - dellemc.openmanage
+
+  tasks:
+  - name: Power state operation based on device id.
+    ome_powerstate:
+      hostname:  "{{ hostname }}"
+      username: "{{ username }}"
+      password:  "{{ password }}"
+      validate_certs: False
+      device_id: "{{devide_id}}"
+      power_state: "{{power_state}}"
